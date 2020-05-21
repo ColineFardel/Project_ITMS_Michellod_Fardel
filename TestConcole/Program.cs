@@ -12,13 +12,9 @@ namespace TestConcole
 {
     class Program
     {
-        public static IConfiguration Configuration { get; } = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("jsconfig.json", optional: true, reloadOnChange: true)
-            .Build();
         static void Main(string[] args)
         {
-            StudentManager studentManager = new StudentManager(Configuration);
+            StudentManager studentManager = new StudentManager();
 
             Console.WriteLine("Get all Students");
             List<Student> students = studentManager.GetStudents();
@@ -27,9 +23,17 @@ namespace TestConcole
                 Console.WriteLine(student.toString());
             }
 
-            //Console.WriteLine("Add money to one student with its UID");
+            Console.WriteLine("Add money to one student with its UID");
+            studentManager.AddMoney(2, 30);
 
-            //Console.WriteLine("Add money to one student with its username");
+            Console.WriteLine("Show balance of one student with its UID");
+            Console.WriteLine(studentManager.ShowBalance(2));
+
+            Console.WriteLine("Add money to one student with its username");
+            studentManager.AddMoney("emma", 50);
+
+            Console.WriteLine("Show balance of one student with its UID");
+            Console.WriteLine(studentManager.ShowBalance("emma"));
         }
     }
 }

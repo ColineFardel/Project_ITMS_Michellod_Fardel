@@ -13,9 +13,9 @@ namespace BLL
     {
         public StudentDB StudentDBObject { get; }
 
-        public StudentManager(IConfiguration configuration) 
+        public StudentManager() 
         {
-            StudentDBObject = new StudentDB(configuration);
+            StudentDBObject = new StudentDB();
         }
 
         public int AddMoney(int id, double money) 
@@ -29,6 +29,16 @@ namespace BLL
         public List<Student> GetStudents()
         {
             return StudentDBObject.GetAllStudents();
+        }
+
+        public string ShowBalance(string username)
+        {
+            return StudentDBObject.ShowBalance(username);
+        }
+
+        public string ShowBalance(int id)
+        {
+            return StudentDBObject.ShowBalance(id);
         }
     }
 }
