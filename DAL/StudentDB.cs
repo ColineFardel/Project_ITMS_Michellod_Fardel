@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,12 @@ namespace DAL
     public class StudentDB : IStudentDB
     {
         public IConfiguration Configuration { get; }
+        public string connectionString = null;
 
         public StudentDB(IConfiguration configuration)
         {
             Configuration = configuration;
+            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
 
         /*
@@ -24,7 +27,7 @@ namespace DAL
         public List<Student> GetAllStudents()
         {
             List<Student> students = null;
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            //string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             try
             {
@@ -47,6 +50,8 @@ namespace DAL
                             student.UID = (int)dr["UID"];
                             student.Username = (string)dr["Username"];
                             student.Money = (double)dr["Money"];
+
+                            students.Add(student);
                         }
                     }
                 }

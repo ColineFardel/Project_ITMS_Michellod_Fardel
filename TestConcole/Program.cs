@@ -27,9 +27,9 @@ namespace TestConcole
                 Console.WriteLine(student.toString());
             }
 
-            Console.WriteLine("Add money to one student with its UID");
+            //Console.WriteLine("Add money to one student with its UID");
 
-            Console.WriteLine("Add money to one student with its username");
+            //Console.WriteLine("Add money to one student with its username");
         }
     }
 }
