@@ -18,6 +18,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{DE3F2971-1FFA-4BB9-877D-A287D56527EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConcole", "TestConcole\TestConcole.csproj", "{2BA1FD89-8452-4A48-8135-E528F73FBCEB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E5567F5A-DD16-4CC3-B694-B7EBDA27ACAE} = {E5567F5A-DD16-4CC3-B694-B7EBDA27ACAE}
+		{DE3F2971-1FFA-4BB9-877D-A287D56527EE} = {DE3F2971-1FFA-4BB9-877D-A287D56527EE}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +46,10 @@ Global
 		{DE3F2971-1FFA-4BB9-877D-A287D56527EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE3F2971-1FFA-4BB9-877D-A287D56527EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE3F2971-1FFA-4BB9-877D-A287D56527EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
