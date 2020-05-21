@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace DAL
 {
-    public class StudentDB
+    public class StudentDB : IStudentDB
     {
         public IConfiguration Configuration { get; }
 
@@ -18,8 +18,8 @@ namespace DAL
             Configuration = configuration;
         }
 
-        /**
-         * This method is used to get a Student with its id/UID
+        /*
+         * This method is used to get all students from the database
          */
         public List<Student> GetAllStudents()
         {

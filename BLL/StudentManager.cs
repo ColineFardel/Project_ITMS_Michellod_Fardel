@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace BLL
 {
-    public class StudentManager
+    public class StudentManager : IStudentManager
     {
         public StudentDB StudentDBObject { get; }
 
