@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Project_ITMS_Michellod_Fardel.Service1" CodeBehind="Student.svc.cs" %>

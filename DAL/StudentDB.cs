@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
-using Microsoft.Extension.Configuration;
 
 namespace DAL
 {

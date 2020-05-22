@@ -87,12 +87,12 @@
     <Content Include="App_Data\ITMS_DB_log.ldf">
       <DependentUpon>ITMS_DB.mdf</DependentUpon>
     </Content>
-    <Content Include="Student.svc" />
+    <Content Include="StudentWebService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Student.svc.cs">
-      <DependentUpon>Student.svc</DependentUpon>
+    <Compile Include="StudentWebService.svc.cs">
+      <DependentUpon>StudentWebService.svc</DependentUpon>
     </Compile>
     <Compile Include="IStudent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -31,6 +31,15 @@ namespace Project_ITMS_Michellod_Fardel
 
         [OperationContract]
         Student GetStudentByUsername(string username);
+
+        [OperationContract]
+        string ShowBalance(int id);
+
+        [OperationContract]
+        string ShowBalance(Student student);
+
+        [OperationContract]
+        string ShowBalance(string username);
     }
 
 }
