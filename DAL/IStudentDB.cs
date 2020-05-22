@@ -17,7 +17,9 @@ namespace DAL
         int AddMoney(Student student, double Money);
         int AddMoney(int id, double Money);
         int AddMoney(string username, double Money);
-        //jme rappelle plus si faut mettre un truc pour print ?
-        //int Print(Student student, int copies);
+
+        string ShowBalance(Student student);
+        string ShowBalance(int id);
+        string ShowBalance(string username);
     }
 }

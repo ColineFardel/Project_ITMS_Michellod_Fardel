@@ -83,9 +83,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
+    <Content Include="App_Data\ITMS_DB.mdf" />
+    <Content Include="App_Data\ITMS_DB_log.ldf">
+      <DependentUpon>ITMS_DB.mdf</DependentUpon>
     </Content>
     <Content Include="Student.svc" />
     <Content Include="Web.config" />

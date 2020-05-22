@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,20 +12,18 @@ namespace DAL
 {
     public class StudentDB : IStudentDB
     {
-        public IConfiguration Configuration { get; }
+        public string connectionString = null;
 
-        public StudentDB(IConfiguration configuration)
-        {
-            Configuration = configuration;
+        public StudentDB() {
+            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
 
-        /*
+        /**
          * This method is used to get all students from the database
          */
         public List<Student> GetAllStudents()
         {
             List<Student> students = null;
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             try
             {
@@ -47,6 +46,8 @@ namespace DAL
                             student.UID = (int)dr["UID"];
                             student.Username = (string)dr["Username"];
                             student.Money = (double)dr["Money"];
+
+                            students.Add(student);
                         }
                     }
                 }
@@ -65,7 +66,6 @@ namespace DAL
         public Student GetStudentByUID(int id) 
         {
             Student student = null;
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             try
             {
@@ -104,7 +104,6 @@ namespace DAL
         public Student GetStudentByUsername(string username)
         {
             Student student = null;
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             try
             {
@@ -143,13 +142,12 @@ namespace DAL
         public int AddMoney(Student student, double Money)
         {
             int result = 0;
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             try
             {
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
-                    string query = "UPDATE Student SET Username=@Username, Money=@Money WHERE UID=@id";
+                    string query = "UPDATE Students SET Username=@Username, Money=@Money WHERE UID=@id";
                     SqlCommand cmd = new SqlCommand(query, cn);
                     cmd.Parameters.AddWithValue("@id", student.UID);
                     cmd.Parameters.AddWithValue("@Username", student.Username);
@@ -183,5 +181,31 @@ namespace DAL
         {
             return AddMoney(GetStudentByUsername(username), Money);
         }
+
+        /**
+         * This method is used to show the balance of a student
+         */
+        public string ShowBalance(Student student) 
+        {
+            return "Balance of " + student.Username + " : " + student.Money;
+        
+        }
+        /**
+         * This method is used to show balance of a student using its id
+         */
+        public string ShowBalance(int id)
+        {
+            return ShowBalance(GetStudentByUID(id));
+        }
+
+        /**
+         * This method is used to show balance of a student using its username
+         */
+        public string ShowBalance(string username)
+        {
+            return ShowBalance(GetStudentByUsername(username));
+        }
+
+
     }
 }

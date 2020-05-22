@@ -11,6 +11,8 @@ namespace BLL
     {
         int AddMoney(int id, double money);
         int AddMoney(string username, double money);
+        string ShowBalance(string username);
+        string ShowBalance(int id);
         List<Student> GetStudents();
     }
 }

@@ -12,7 +12,6 @@ namespace DTO
 
         public string Username { get; set; }
 
-        //dans la db, decimal ? money?
         public double Money { get; set; }
 
         public string toString()
