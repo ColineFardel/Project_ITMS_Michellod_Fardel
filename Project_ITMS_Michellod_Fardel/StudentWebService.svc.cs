@@ -31,7 +31,7 @@ namespace Project_ITMS_Michellod_Fardel
         {
             return StudentDBObject.AddMoney(username, money);
         }
-        
+
         int IStudent.AddMoney(Student student, double money)
         {
             return StudentDBObject.AddMoney(student, money);

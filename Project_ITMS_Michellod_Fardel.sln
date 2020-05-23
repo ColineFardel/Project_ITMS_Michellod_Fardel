@@ -25,6 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConcole", "TestConcole\
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsWebService", "WindowsFormsWebService\WindowsFormsWebService.csproj", "{3C4C7C12-D33E-4130-B996-7CD546515D05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F158AC33-FAA6-45AB-A992-80D5FED06EAF} = {F158AC33-FAA6-45AB-A992-80D5FED06EAF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

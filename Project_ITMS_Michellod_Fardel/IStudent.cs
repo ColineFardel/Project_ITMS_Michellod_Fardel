@@ -11,34 +11,35 @@ using DTO;
 
 namespace Project_ITMS_Michellod_Fardel
 {
-    [ServiceContract]
+    [ServiceContractAttribute]
     public interface IStudent
     {
-        [OperationContract]
+
+        [OperationContractAttribute(Name ="AddMoneyUID")]
         int AddMoney(int id, double money);
 
-        [OperationContract]
+        [OperationContractAttribute(Name ="AddMoneyUsername")]
         int AddMoney(string username, double money);
 
-        [OperationContract]
+        [OperationContractAttribute(Name ="AddMoneyStudent")]
         int AddMoney(Student student, double money);
 
-        [OperationContract]
+        [OperationContractAttribute]
         List<Student> GetAllStudents();
 
-        [OperationContract]
+        [OperationContractAttribute]
         Student GetStudentByUID(int id);
 
-        [OperationContract]
+        [OperationContractAttribute]
         Student GetStudentByUsername(string username);
 
-        [OperationContract]
+        [OperationContractAttribute(Name ="ShowBalanceID")]
         string ShowBalance(int id);
 
-        [OperationContract]
+        [OperationContractAttribute(Name ="ShowBalanceStudent")]
         string ShowBalance(Student student);
 
-        [OperationContract]
+        [OperationContractAttribute(Name ="ShowBalanceUsername")]
         string ShowBalance(string username);
     }
 

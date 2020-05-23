@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StudentWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62228/StudentWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62228/StudentWebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62228/StudentWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IStudent_AddMoneyUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMoneyUID" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_AddMoneyUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMoneyUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_AddMoneyUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMoneyUsername" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_AddMoneyUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMoneyUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_AddMoneyStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMoneyStudent" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_AddMoneyStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMoneyStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetAllStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStudents" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetAllStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByUID" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_GetStudentByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_ShowBalanceID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowBalanceID" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_ShowBalanceID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowBalanceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_ShowBalanceStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowBalanceStudent" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_ShowBalanceStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowBalanceStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_ShowBalanceUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowBalanceUsername" />
+  </wsdl:message>
+  <wsdl:message name="IStudent_ShowBalanceUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowBalanceUsernameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IStudent">
+    <wsdl:operation name="AddMoneyUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/AddMoneyUID" message="tns:IStudent_AddMoneyUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/AddMoneyUIDResponse" message="tns:IStudent_AddMoneyUID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMoneyUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/AddMoneyUsername" message="tns:IStudent_AddMoneyUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/AddMoneyUsernameResponse" message="tns:IStudent_AddMoneyUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMoneyStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/AddMoneyStudent" message="tns:IStudent_AddMoneyStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/AddMoneyStudentResponse" message="tns:IStudent_AddMoneyStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/GetAllStudents" message="tns:IStudent_GetAllStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/GetAllStudentsResponse" message="tns:IStudent_GetAllStudents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/GetStudentByUID" message="tns:IStudent_GetStudentByUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/GetStudentByUIDResponse" message="tns:IStudent_GetStudentByUID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/GetStudentByUsername" message="tns:IStudent_GetStudentByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/GetStudentByUsernameResponse" message="tns:IStudent_GetStudentByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowBalanceID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/ShowBalanceID" message="tns:IStudent_ShowBalanceID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/ShowBalanceIDResponse" message="tns:IStudent_ShowBalanceID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowBalanceStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/ShowBalanceStudent" message="tns:IStudent_ShowBalanceStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/ShowBalanceStudentResponse" message="tns:IStudent_ShowBalanceStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowBalanceUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStudent/ShowBalanceUsername" message="tns:IStudent_ShowBalanceUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStudent/ShowBalanceUsernameResponse" message="tns:IStudent_ShowBalanceUsername_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStudent" type="tns:IStudent">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddMoneyUID">
+      <soap:operation soapAction="http://tempuri.org/IStudent/AddMoneyUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMoneyUsername">
+      <soap:operation soapAction="http://tempuri.org/IStudent/AddMoneyUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMoneyStudent">
+      <soap:operation soapAction="http://tempuri.org/IStudent/AddMoneyStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStudents">
+      <soap:operation soapAction="http://tempuri.org/IStudent/GetAllStudents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByUID">
+      <soap:operation soapAction="http://tempuri.org/IStudent/GetStudentByUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentByUsername">
+      <soap:operation soapAction="http://tempuri.org/IStudent/GetStudentByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowBalanceID">
+      <soap:operation soapAction="http://tempuri.org/IStudent/ShowBalanceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowBalanceStudent">
+      <soap:operation soapAction="http://tempuri.org/IStudent/ShowBalanceStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowBalanceUsername">
+      <soap:operation soapAction="http://tempuri.org/IStudent/ShowBalanceUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StudentWebService">
+    <wsdl:port name="BasicHttpBinding_IStudent" binding="tns:BasicHttpBinding_IStudent">
+      <soap:address location="http://localhost:62228/StudentWebService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

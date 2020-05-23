@@ -12,18 +12,20 @@ namespace WindowsFormsWebService
 {
     public partial class Form2 : Form
     {
+        private StudentServiceReference.StudentClient client;
         public Form2()
         {
             InitializeComponent();
+            client = new StudentServiceReference.StudentClient();
         }
         private void buttonGetStudentUsername_Click(object sender, EventArgs e)
         {
-
+            var result = client.GetStudentByUsername(textBoxUsername.Text);
         }
 
         private void buttonGetStudentUID_Click(object sender, EventArgs e)
         {
-
+            var result = client.GetStudentByUID((int) double.Parse(textBoxUID.Text));
         }
 
         private void buttonGetAll_Click(object sender, EventArgs e)
