@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConcole", "TestConcole\
 		{DE3F2971-1FFA-4BB9-877D-A287D56527EE} = {DE3F2971-1FFA-4BB9-877D-A287D56527EE}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsWebService", "WindowsFormsWebService\WindowsFormsWebService.csproj", "{3C4C7C12-D33E-4130-B996-7CD546515D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BA1FD89-8452-4A48-8135-E528F73FBCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4C7C12-D33E-4130-B996-7CD546515D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4C7C12-D33E-4130-B996-7CD546515D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4C7C12-D33E-4130-B996-7CD546515D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4C7C12-D33E-4130-B996-7CD546515D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
