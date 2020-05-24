@@ -37,13 +37,15 @@ namespace WindowsFormsWebService
             this.textBoxUID = new System.Windows.Forms.TextBox();
             this.buttonGetAll = new System.Windows.Forms.Button();
             this.buttonGetStudentUID = new System.Windows.Forms.Button();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelUID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonGetStudentUsername
             // 
             this.buttonGetStudentUsername.Location = new System.Drawing.Point(354, 52);
             this.buttonGetStudentUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonGetStudentUsername.Name = "buttonGetStudent";
+            this.buttonGetStudentUsername.Name = "buttonGetStudentUsername";
             this.buttonGetStudentUsername.Size = new System.Drawing.Size(112, 35);
             this.buttonGetStudentUsername.TabIndex = 2;
             this.buttonGetStudentUsername.Text = "Get Student";
@@ -57,7 +59,6 @@ namespace WindowsFormsWebService
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(148, 26);
             this.textBoxUsername.TabIndex = 1;
-            this.textBoxUsername.Text = "username";
             // 
             // textBoxUID
             // 
@@ -66,7 +67,6 @@ namespace WindowsFormsWebService
             this.textBoxUID.Name = "textBoxUID";
             this.textBoxUID.Size = new System.Drawing.Size(148, 26);
             this.textBoxUID.TabIndex = 1;
-            this.textBoxUID.Text = "uid";
             // 
             // buttonGetAll
             // 
@@ -77,6 +77,7 @@ namespace WindowsFormsWebService
             this.buttonGetAll.TabIndex = 3;
             this.buttonGetAll.Text = "Get all students";
             this.buttonGetAll.UseVisualStyleBackColor = true;
+            this.buttonGetAll.Click += new System.EventHandler(this.buttonGetAll_Click_1);
             // 
             // buttonGetStudentUID
             // 
@@ -89,6 +90,24 @@ namespace WindowsFormsWebService
             this.buttonGetStudentUID.UseVisualStyleBackColor = true;
             this.buttonGetStudentUID.Click += new System.EventHandler(this.buttonGetStudentUID_Click);
             // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(102, 31);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(83, 20);
+            this.labelUsername.TabIndex = 0;
+            this.labelUsername.Text = "Username";
+            // 
+            // labelUID
+            // 
+            this.labelUID.AutoSize = true;
+            this.labelUID.Location = new System.Drawing.Point(121, 134);
+            this.labelUID.Name = "labelUID";
+            this.labelUID.Size = new System.Drawing.Size(38, 20);
+            this.labelUID.TabIndex = 7;
+            this.labelUID.Text = "UID";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -99,6 +118,8 @@ namespace WindowsFormsWebService
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxUID);
             this.Controls.Add(this.buttonGetAll);
+            this.Controls.Add(this.labelUsername);
+            this.Controls.Add(this.labelUID);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -114,6 +135,8 @@ namespace WindowsFormsWebService
         private System.Windows.Forms.Button buttonGetAll;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxUID;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelUID;
      
     }
 

@@ -21,12 +21,15 @@ namespace WindowsFormsWebService
         }
         private void buttonAddMoneyUsername_Click(object sender, EventArgs e)
         {
-            var result = client.AddMoneyUsername(textBoxUsername.Text, double.Parse(textBoxAmountUsername.Text));
+            client.AddMoneyUsername(textBoxUsername.Text, double.Parse(textBoxAmountUsername.Text));
+            this.Hide();
+            Form3 f3 = new Form3(this);
+            f3.ShowDialog();
         }
 
         private void buttonAddMoneyUID_Click(object sender, EventArgs e)
         {
-            var result = client.AddMoneyUID((int)double.Parse(textBoxUID.Text), double.Parse(textBoxAmountUID.Text));
+           client.AddMoneyUID((int)double.Parse(textBoxUID.Text), double.Parse(textBoxAmountUID.Text));
         }
 
 
@@ -46,6 +49,11 @@ namespace WindowsFormsWebService
         }
 
         private void textBoxUID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

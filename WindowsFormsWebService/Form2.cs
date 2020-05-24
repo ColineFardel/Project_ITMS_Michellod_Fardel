@@ -20,17 +20,17 @@ namespace WindowsFormsWebService
         }
         private void buttonGetStudentUsername_Click(object sender, EventArgs e)
         {
-            var result = client.GetStudentByUsername(textBoxUsername.Text);
+            client.GetStudentByUsername(textBoxUsername.Text);
         }
 
         private void buttonGetStudentUID_Click(object sender, EventArgs e)
         {
-            var result = client.GetStudentByUID((int) double.Parse(textBoxUID.Text));
+           client.GetStudentByUID((int) double.Parse(textBoxUID.Text));
         }
 
         private void buttonGetAll_Click(object sender, EventArgs e)
         {
-
+            client.GetAllStudents();
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
@@ -39,6 +39,11 @@ namespace WindowsFormsWebService
         }
 
         private void textBoxUID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGetAll_Click_1(object sender, EventArgs e)
         {
 
         }

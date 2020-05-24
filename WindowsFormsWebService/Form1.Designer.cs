@@ -38,6 +38,10 @@ namespace WindowsFormsWebService
             this.textBoxAmountUID = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxUID = new System.Windows.Forms.TextBox();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelAmount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelUID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonAddMoneyUsername
@@ -58,7 +62,6 @@ namespace WindowsFormsWebService
             this.textBoxAmountUsername.Name = "textBoxAmountUsername";
             this.textBoxAmountUsername.Size = new System.Drawing.Size(148, 26);
             this.textBoxAmountUsername.TabIndex = 1;
-            this.textBoxAmountUsername.Text = "Amount";
             // 
             // buttonAddMoneyUID
             // 
@@ -78,7 +81,6 @@ namespace WindowsFormsWebService
             this.textBoxAmountUID.Name = "textBoxAmountUID";
             this.textBoxAmountUID.Size = new System.Drawing.Size(148, 26);
             this.textBoxAmountUID.TabIndex = 4;
-            this.textBoxAmountUID.Text = "Amount";
             // 
             // textBoxUsername
             // 
@@ -87,7 +89,6 @@ namespace WindowsFormsWebService
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(148, 26);
             this.textBoxUsername.TabIndex = 1;
-            this.textBoxUsername.Text = "Username";
             // 
             // textBoxUID
             // 
@@ -96,19 +97,59 @@ namespace WindowsFormsWebService
             this.textBoxUID.Name = "textBoxUID";
             this.textBoxUID.Size = new System.Drawing.Size(148, 26);
             this.textBoxUID.TabIndex = 5;
-            this.textBoxUID.Text = "UID";
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(74, 25);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(83, 20);
+            this.labelUsername.TabIndex = 0;
+            this.labelUsername.Text = "Username";
+            // 
+            // labelAmount
+            // 
+            this.labelAmount.AutoSize = true;
+            this.labelAmount.Location = new System.Drawing.Point(279, 25);
+            this.labelAmount.Name = "labelAmount";
+            this.labelAmount.Size = new System.Drawing.Size(65, 20);
+            this.labelAmount.TabIndex = 0;
+            this.labelAmount.Text = "Amount";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(279, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Amount";
+            // 
+            // labelUID
+            // 
+            this.labelUID.AutoSize = true;
+            this.labelUID.Location = new System.Drawing.Point(74, 141);
+            this.labelUID.Name = "labelUID";
+            this.labelUID.Size = new System.Drawing.Size(83, 20);
+            this.labelUID.TabIndex = 7;
+            this.labelUID.Text = "UID";
+            this.labelUID.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 423);
+            this.Controls.Add(this.labelUID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxUID);
             this.Controls.Add(this.textBoxAmountUID);
             this.Controls.Add(this.buttonAddMoneyUID);
             this.Controls.Add(this.buttonAddMoneyUsername);
             this.Controls.Add(this.textBoxAmountUsername);
             this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.labelUsername);
+            this.Controls.Add(this.labelAmount);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -121,10 +162,14 @@ namespace WindowsFormsWebService
 
         private System.Windows.Forms.Button buttonAddMoneyUsername;
         private System.Windows.Forms.Button buttonAddMoneyUID;
-        private System.Windows.Forms.TextBox textBoxAmountUsername;
-        private System.Windows.Forms.TextBox textBoxAmountUID;
-        private System.Windows.Forms.TextBox textBoxUsername;
+        public System.Windows.Forms.TextBox textBoxAmountUsername;
+        public System.Windows.Forms.TextBox textBoxAmountUID;
+        public System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxUID;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelAmount;
+        private Label label1;
+        private System.Windows.Forms.Label labelUID;
     }
 
 
