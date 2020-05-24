@@ -6,8 +6,8 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using DAL;
-using BLL;
 using DTO;
+using BLL;
 
 namespace Project_ITMS_Michellod_Fardel
 {
@@ -65,6 +65,13 @@ namespace Project_ITMS_Michellod_Fardel
         string IStudent.ShowBalance(string username)
         {
             return StudentDBObject.ShowBalance(username);
+        }
+        public string Balance(string username)
+        {
+            IStudentDB userDb = new StudentDB();
+            IStudentManager userManager = new StudentManager(userDb);
+            var user = userManager.ShowBalance(username);
+            return user;
         }
     }
 }

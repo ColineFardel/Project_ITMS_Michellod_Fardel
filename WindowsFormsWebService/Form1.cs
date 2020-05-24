@@ -21,6 +21,7 @@ namespace WindowsFormsWebService
         }
         private void buttonAddMoneyUsername_Click(object sender, EventArgs e)
         {
+            
             client.AddMoneyUsername(textBoxUsername.Text, double.Parse(textBoxAmountUsername.Text));
             this.Hide();
             Form3 f3 = new Form3(this);
@@ -35,7 +36,7 @@ namespace WindowsFormsWebService
 
         private void textBoxAmountUsername_TextChanged(object sender, EventArgs e)
         {
-           
+         
         }
 
         private void textBoxAmountUID_TextChanged(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace WindowsFormsWebService
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBoxUID_TextChanged(object sender, EventArgs e)
@@ -57,5 +58,6 @@ namespace WindowsFormsWebService
         {
 
         }
+
     }
 }

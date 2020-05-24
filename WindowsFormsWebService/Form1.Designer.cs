@@ -57,7 +57,7 @@ namespace WindowsFormsWebService
             // 
             // textBoxAmountUsername
             // 
-            this.textBoxAmountUsername.Location = new System.Drawing.Point(244, 50);
+            this.textBoxAmountUsername.Location = new System.Drawing.Point(253, 50);
             this.textBoxAmountUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAmountUsername.Name = "textBoxAmountUsername";
             this.textBoxAmountUsername.Size = new System.Drawing.Size(148, 26);
@@ -89,6 +89,7 @@ namespace WindowsFormsWebService
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(148, 26);
             this.textBoxUsername.TabIndex = 1;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // textBoxUID
             // 
@@ -130,7 +131,7 @@ namespace WindowsFormsWebService
             this.labelUID.AutoSize = true;
             this.labelUID.Location = new System.Drawing.Point(74, 141);
             this.labelUID.Name = "labelUID";
-            this.labelUID.Size = new System.Drawing.Size(83, 20);
+            this.labelUID.Size = new System.Drawing.Size(38, 20);
             this.labelUID.TabIndex = 7;
             this.labelUID.Text = "UID";
             this.labelUID.Click += new System.EventHandler(this.label2_Click);
@@ -152,7 +153,7 @@ namespace WindowsFormsWebService
             this.Controls.Add(this.labelAmount);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Add Money";
             this.ResumeLayout(false);
             this.PerformLayout();
 

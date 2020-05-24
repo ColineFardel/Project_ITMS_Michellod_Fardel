@@ -12,25 +12,22 @@ namespace WindowsFormsWebService
 {
     public partial class Form2 : Form
     {
+
         private StudentServiceReference.StudentClient client;
         public Form2()
         {
             InitializeComponent();
             client = new StudentServiceReference.StudentClient();
         }
-        private void buttonGetStudentUsername_Click(object sender, EventArgs e)
+
+        private void buttonShowBalanceUID_Click(object sender, EventArgs e)
         {
-            client.GetStudentByUsername(textBoxUsername.Text);
+            client.ShowBalanceID((int)double.Parse(textBoxUID.Text));
         }
 
-        private void buttonGetStudentUID_Click(object sender, EventArgs e)
+        private void buttonShowBalanceUsername_Click(object sender, EventArgs e)
         {
-           client.GetStudentByUID((int) double.Parse(textBoxUID.Text));
-        }
-
-        private void buttonGetAll_Click(object sender, EventArgs e)
-        {
-            client.GetAllStudents();
+            client.ShowBalanceUsername(textBoxUsername.Text);
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
@@ -39,11 +36,6 @@ namespace WindowsFormsWebService
         }
 
         private void textBoxUID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonGetAll_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -41,6 +41,11 @@ namespace Project_ITMS_Michellod_Fardel
 
         [OperationContractAttribute(Name ="ShowBalanceUsername")]
         string ShowBalance(string username);
+
+        [OperationContractAttribute(Name = "BalanceUsername")]
+        string Balance(string username);
     }
+
+   
 
 }

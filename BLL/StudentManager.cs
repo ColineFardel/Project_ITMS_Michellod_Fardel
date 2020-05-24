@@ -11,11 +11,12 @@ namespace BLL
 {
     public class StudentManager : IStudentManager
     {
-        public StudentDB StudentDBObject { get; }
+        public IStudentDB StudentDBObject { get; }
 
-        public StudentManager() 
+        public StudentManager(IStudentDB studentDB) 
         {
             StudentDBObject = new StudentDB();
+            StudentDBObject = studentDB;
         }
 
         public int AddMoney(int id, double money) 
